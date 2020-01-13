@@ -2,6 +2,11 @@ from ubuntu:18.04
 
 # Install prerequisites
 run apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    software-properties-common
+
+run add-apt-repository ppa:alex-p/tesseract-ocr
+
+run apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     build-essential \
     cmake \
     curl \
